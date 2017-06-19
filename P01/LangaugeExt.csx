@@ -7,10 +7,11 @@ T last<T>(Lst<T> lst) =>
     lst.Any() ? lst.Last() : throw new Exception("Empty");
 
 void q<T>(T i, Lst<T> lst) {
-    Action<T> p = (T t) => Console.WriteLine(t);
-    Func<Lst<T>, T> l = last;
-    l.Compose(p)(lst);
+    Func<Lst<T>, T> lass = last;
+    Func<T,bool> eq = (k) => i.Equals(k);
+    lass.Compose(eq).Compose(Console.WriteLine)(lst);
 }
 
 q(4,    Prelude.List(1,2,3,4));
 q('z',  Prelude.List('x', 'y', 'z'));
+

@@ -9,7 +9,6 @@ Option<T> last<T>(Lst<T> lst) {
     return List.fold(lst, tup ,  (a,b) => Prelude.Tuple<Option<T>,Option<T>>(a.Last(), b)).Head();
 }
 
-
 void q<T>(Option<T> x, Lst<T> lst) {
     var k = last(lst);
     Console.WriteLine(x == last(lst));
