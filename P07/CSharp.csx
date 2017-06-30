@@ -1,4 +1,7 @@
 
+using L = System.Collections.Generic.List<int>;
+
+
 public class Nested<T> {
     public T Value { set;get;}
     public List<Nested<T>> List { set;get;} = new List<Nested<T>>();
