@@ -1,5 +1,4 @@
-
-IEnumerable<T> go<T>(IEnumerable<T> input) {
+IEnumerable<T> dupli<T>(IEnumerable<T> input) {
     T1 id<T1,X>(T1 t, X x) => t;
     IEnumerable<T> dup(T t) => new [] { t, t};
 
@@ -12,6 +11,5 @@ void print<T>(IEnumerable<T> input) {
     Console.WriteLine();
 }
 
-print(go(new [] { 1,2,3}));
-print(go(new [] { "A", "B", "C" }));
-
+print(dupli(new [] { 1, 2, 3}));            // 112233
+print(dupli(new [] { "A", "B", "C" }));     // AABBCC
