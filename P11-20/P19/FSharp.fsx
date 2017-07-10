@@ -11,7 +11,6 @@ let rec rotate n xs =
         xs
 
 let input = ['a' .. 'h']
-
 input |> rotate 3   |> printfn "%A"
 input |> rotate -2  |> printfn "%A"
     
