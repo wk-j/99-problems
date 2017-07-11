@@ -1,5 +1,3 @@
-
-
 Tuple<T, IEnumerable<T>> removeAt<T>(IEnumerable<T> input, int n) {
     var n1 = n - 1;
     var list = input.ToList();
