@@ -14,3 +14,6 @@ let input = ['a' .. 'h']
 input |> rotate 3   |> printfn "%A"
 input |> rotate -2  |> printfn "%A"
     
+
+let f x =
+    [(x : int); x ; x]
