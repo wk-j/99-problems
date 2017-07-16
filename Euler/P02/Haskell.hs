@@ -8,3 +8,4 @@ p1 = sum [ x | x <- takeWhile (<= 1000000) fibs, even x]
 main :: IO()
 main = 
     print p1 
+    
