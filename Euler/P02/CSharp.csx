@@ -1,7 +1,7 @@
-IEnumerable<Result> unfold<T,Result>(T start, Func<T,Tuple<Result,T>> func) {
+IEnumerable<Result> unfold<State,Result>(State start, Func<State,Tuple<Result,State>> func) {
     var result = func(start);
     yield return result.Item1;
-    foreach(var x in unfold<T,Result>(result.Item2, func)) yield return x;
+    foreach(var x in unfold<State,Result>(result.Item2, func)) yield return x;
 }
 
 public class T {
