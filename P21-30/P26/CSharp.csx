@@ -11,8 +11,4 @@ IEnumerable<Tuple<T,T,T>> combinations<T>(IEnumerable<T> input, int n) {
 
 var rs = combinations(new [] { "a","b","c","d","e", "f" }, 3).Select(x => $"{x.Item1}{x.Item2}{x.Item3}");
 Console.WriteLine(string.Join(",", rs));
-
-var rs2 = combinations(Enumerable.Range(1, 12), 3).Count();
-Console.WriteLine(rs2);
-
-// wrong
+Console.WriteLine(rs.Count());
