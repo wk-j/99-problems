@@ -23,19 +23,5 @@ let elementAt4<'a> : int -> 'a list -> 'a = ((<<) List.last) << List.take
 [1;2;3;4]       |> elementAt4 1 |> ((=) 1)   |> printfn "%A"
 ['a';'b';'c']   |> elementAt4 1 |> ((=) 'a') |> printfn "%A"
 
-(*
-error FS0030: Value restriction. The value 'elementAt4' has been inferred to
-have generic type
-    val elementAt4 : (int -> '_a list -> '_a)
-Either make the arguments to 'elementAt4' explicit or, 
-if you do not intend for it to be generic, add a type annotation.
-*)
-
 [1;2;3;4]       |> elementAt3 1 |> ((=) 1)   |> printfn "%A"
 [1;2;3;4]       |> elementAt5 4 |> ((=) 4)   |> printfn "%A"
-
-
-
-
-
-
