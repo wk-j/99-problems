@@ -1,6 +1,4 @@
--- (script)
-
-module X where
+-- stack runghc --package strict
 
 import Control.Category hiding ((.))
 
