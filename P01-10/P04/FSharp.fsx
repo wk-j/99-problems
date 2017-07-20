@@ -11,8 +11,6 @@ module l1 =
 
 
 module l2 =
-
-
     let len2 = List.fold (fun a x -> a + 1) 0
     let q x = len2 >> (=) x >> printfn "%A"
 
