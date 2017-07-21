@@ -3,7 +3,6 @@ let flip f x y = f y x
 
 let p1 (x: 'a list) = 
     let l1,l2 = List.splitAt (x.Length / 2) x
-    //l1 = List.foldBack (fun x a -> a @ [x]) l2.Tail []
     l2.Tail = List.fold (fun a x -> x :: a) [] l1
 
 

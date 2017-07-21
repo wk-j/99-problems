@@ -7,4 +7,3 @@ main = do
     let g  = (last <<<) <<< take
     let a = k 4 [1,2,3,4]
     putStrLn $ show a 
-    
