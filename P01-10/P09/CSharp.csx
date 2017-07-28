@@ -1,10 +1,8 @@
-
-IEnumerable<IEnumerable<T>> group<T>(IEnumerable<T> input, Func<T, Object> k) =>
+IEnumerable<IEnumerable<T>> pack<T>(IEnumerable<T> input, Func<T, Object> k) =>
     input.GroupBy(k).Select( x => x.AsEnumerable());
 
 var data = "aaaabccaadeeee".ToCharArray();
-//var data = new [] { 1,1,1,2, 3,3,4, 4};
-var result = group(data, x => x);
+var result = pack(data, x => x);
 
 Console.WriteLine(result.Count());
 
