@@ -18,6 +18,11 @@ let xor' a b = (a: bool) <> b
 let equ' a b = (a: bool) = b
 let impl' a b = or' (not' a) b
 
+type System.Boolean with
+    member x.or' = or' x
+    member x.not' = not' x
+    member x.and' = and' x
+
 let table f =
     let ls = 
         query { 
@@ -32,5 +37,5 @@ let table f =
         let x = f x1 x2
         printfn "%A %A %A" x1 x2 x
 
-table (fun a b -> (and' a (or' a b)))
-table (fun a b -> (and' a b))
+fun (a:bool) b -> a .and' (a .or' (not' b))
+|> table
