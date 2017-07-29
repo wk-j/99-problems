@@ -6,4 +6,15 @@ let replicateM n x =
             [List.Cons(x,xs)]) m') m       
     List.foldBack k (List.replicate n x) [[]]
 
+let rec replicateMM m l = seq {
+  if m = 1 then 
+    // If we want just one replication, generate singleton lists
+    for v in l do yield [v]
+  else 
+    // Otherwise, iterate over all lists with m-1 replicates
+    for s in replicateM (m - 1) l do
+      // .. and append elements from 'l' to the front
+      for v in l do yield v::s }
+
 [true;false] |> replicateM 3 |> printfn "%A"
+[true;false] |> replicateMM 3 |> Seq.toList |> printfn "%A"
