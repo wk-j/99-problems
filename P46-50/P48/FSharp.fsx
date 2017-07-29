@@ -1,3 +1,9 @@
+#nowarn "25"
+
+#r "../../packages/FSharpPlus/lib/net40/FSharpPlus.dll"
+
+open FSharpPlus.Data
+
 let not' = function
     | true -> false
     | false -> true
@@ -21,20 +27,13 @@ let impl' a b = or' (not' a) b
 type System.Boolean with
     member x.Or = or' x
     member x.And = and' x
+    member x.Equ = equ' x
 
-let table f =
-    let ls = 
-        query { 
-            for a in [ true; false] do
-            for b in [ true; false] do
-            select (a,b)
-        }
-
+let table n f =
+    let ls = List.replicateM n [true;false]
     for x in ls do 
-        let x1 = fst x
-        let x2 = snd x
-        let x = f x1 x2
-        printfn "%A %A %A" x1 x2 x
+        let rs = f x
+        printfn "%A %A" x rs
 
-fun (a:bool) b -> a .And (a .Or (not' b))
-|> table
+fun [a: bool; b;c;] ->  (a .Or b) .Or c
+|> table 3

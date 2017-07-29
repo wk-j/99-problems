@@ -2,3 +2,4 @@ source https://www.nuget.org/api/v2
 
 nuget LanguageExt.Core
 nuget System.ValueTuple
+nuget FSharpPlus 1.0.0-CI00089
