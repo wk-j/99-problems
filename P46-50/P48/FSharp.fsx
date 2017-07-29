@@ -34,6 +34,13 @@ let table n f =
     for x in ls do 
         let rs = f x
         printfn "%A %A" x rs
+    printfn ""
 
 fun [a: bool; b;c;] ->  (a .Or b) .Or c
+|> table 3
+
+fun [a: bool; b;c;] ->  (a || b) || c
+|> table 3
+
+fun [a: bool; b;c;] -> a && (b || c) = a && b || a && c 
 |> table 3
