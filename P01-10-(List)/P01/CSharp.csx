@@ -10,4 +10,3 @@ void q<T>(T i , IEnumerable<T> x) where T : IEquatable<T>
 
 q(4,    new List<int> { 1,2,3,4} );
 q('z',  new List<char> { 'x', 'y', 'z'});
-

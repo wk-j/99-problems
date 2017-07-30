@@ -1,5 +1,4 @@
-
-#r "../packages/LanguageExt.Core/lib/net451/LanguageExt.Core.dll"
+#r "../../packages/LanguageExt.Core/lib/net451/LanguageExt.Core.dll"
 
 using LanguageExt;
 
