@@ -11,6 +11,10 @@
         ".paket": true,
         ".pulp-cache": true,
         ".vscode": true,
-        "packages": true
+        "packages": true,
+        "**/*.ibc": true,
+        ".psci_modules": true,
+        ".psc-ide-port": true,
+        ".purs-repl": true
     }
 }
