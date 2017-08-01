@@ -1,4 +1,3 @@
-
 open System
 
 let rec last2 (lst: 'a list) = 
