@@ -1,0 +1,23 @@
+{
+  "name": "ninetynineproblems",
+  "version": "1.0.0",
+  "description": "- https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wk-j/ninety-nine-problems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wk-j/ninety-nine-problems/issues"
+  },
+  "homepage": "https://github.com/wk-j/ninety-nine-problems#readme",
+  "devDependencies": {
+    "@types/ramda": "^0.24.5",
+    "ramda": "^0.24.1"
+  }
+}
