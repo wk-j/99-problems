@@ -14,15 +14,6 @@ last2 [] = error "Err"
 last3 :: Foldable f => f a -> Maybe a
 last3 = fst . foldl (\(a,b) x -> (b,Just x)) (Nothing,Nothing)
 
-q x = last1 >>> (==) x >>> show >>> putStrLn
-q2 f x = (show >>> putStrLn) <<< (==) x <<< f
-
 main = do
-    q 3     [1,2,3,4] 
-    q 'y'   ['a' .. 'z']
-    q 1     [1,2]
-
-    q2 last2    3   [1,2,3,4]
-    q2 last1    3   [1,2,3,4]
-
-    q2 last3    (Just 3)   [1,2,3,4]
+    print $ last1 [1,2,3,4,5] == 4
+    print $ last2 [1,2,3,4,5] == 4

@@ -1,13 +1,10 @@
 
 open System
 
-let rec myButLast (lst: 'a list) = 
+let rec last2 (lst: 'a list) = 
     match lst with
     | [] -> raise <| Exception "Err"
     | [k;_] -> k
-    | k :: xs -> myButLast xs
+    | k :: xs -> last2 xs
 
-let q x = myButLast >> ((=) x) >> printfn "%A"
-
-q 3     [1;2;3;4]
-q 'y'   ['a' .. 'z']
+[1;2;3;4] |> last2 = 3 |> printfn "%A"
