@@ -11,3 +11,5 @@ tools
 packages
 *.exe
 *.ibc
+elm-stuff
+index.html

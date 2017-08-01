@@ -10,5 +10,4 @@ let p1 xs =
         | None -> [(1, x)]
     ) xs [] 
 
-
 "aaaabccaadeeee".ToCharArray() |> List.ofArray |> p1 |> printfn "%A"
