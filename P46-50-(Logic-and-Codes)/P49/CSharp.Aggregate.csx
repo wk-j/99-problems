@@ -7,7 +7,7 @@ IEnumerable<string> gray(int n) {
     else { 
         return gray(n - 1).Aggregate(Enumerable.Empty<string>(), (acc,s) => {
             var x = acc.Concat(new [] { "0" + s }).Concat(new [] { "1" + s });
-             Console.WriteLine($"s = {s}, acc = {string.Join(" ",acc)}, x = {string.Join(" ", x)}");
+             //Console.WriteLine($"s = {s}, acc = {string.Join(" ",acc)}, x = {string.Join(" ", x)}");
              return x;
         });
     }
