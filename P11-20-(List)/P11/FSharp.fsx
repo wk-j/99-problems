@@ -20,3 +20,4 @@ let compress = List.foldBack go data []
 #time
 
 compress = [Multiple (4,'a'); Single 'b'; Multiple (2,'c'); Multiple (2,'a'); Single 'd'; Multiple (4,'e')] |> printfn "%A"
+

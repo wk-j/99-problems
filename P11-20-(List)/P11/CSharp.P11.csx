@@ -35,4 +35,3 @@ var ans = list.Aggregate(empty, (a, x) => {
 });
 
 Console.WriteLine("Hello");
-
